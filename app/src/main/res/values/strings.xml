@@ -15,4 +15,16 @@
     <string name="AI_level">AI level</string>
     <string name="language">Language</string>
     <string name="apply">Apply</string>
+    <string name="player_name">Player name</string>
+    <string name="AI">AI</string>
+    <string name="color">Color</string>
+    <string-array name="player_colors">
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Black</item>
+    </string-array>
 </resources>

@@ -6,43 +6,153 @@
     android:layout_height="match_parent"
     tools:context=".PlayerSettingsActivity">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="160dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="160dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
+    <RelativeLayout
         android:id="@+id/view3"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" >
+        <EditText
+            android:id="@+id/name3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:hint="@string/player_name"
+            android:inputType="text" />
+
+        <CheckBox
+            android:id="@+id/isAI3"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/AI"/>
+        <Spinner
+            android:id="@+id/colors3"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/isAI3"
+            android:entries="@array/player_colors">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="160dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <EditText
+            android:id="@+id/name1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:hint="@string/player_name"
+            android:inputType="text"/>
+
+        <CheckBox
+            android:id="@+id/isAI1"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/AI"/>
+        <Spinner
+            android:id="@+id/colors1"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/isAI1"
+            android:entries="@array/player_colors">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view2"
         android:layout_width="160dp"
         android:layout_height="240dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <EditText
+            android:id="@+id/name2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:hint="@string/player_name"
+            android:inputType="text"/>
 
-    <View
+        <CheckBox
+            android:id="@+id/isAI2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/AI"/>
+        <Spinner
+            android:id="@+id/colors2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/isAI2"
+            android:entries="@array/player_colors">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/view4"
         android:layout_width="160dp"
         android:layout_height="240dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+        <EditText
+            android:id="@+id/name4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:hint="@string/player_name"
+            android:inputType="text"/>
+
+        <CheckBox
+            android:id="@+id/isAI4"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/name4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/AI"/>
+        <Spinner
+            android:id="@+id/colors4"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/isAI4"
+            android:entries="@array/player_colors">
+        </Spinner>
+    </RelativeLayout>
+
     <Button
         android:id="@+id/apply"
+        android:onClick="apply"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginEnd="40dp"
