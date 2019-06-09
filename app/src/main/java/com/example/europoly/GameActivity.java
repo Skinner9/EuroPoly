@@ -30,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
         rollDices = (Button) findViewById(R.id.rollDices);
         imageView3 = (ImageView) findViewById(R.id.imageView3);
         imageView4 = (ImageView) findViewById(R.id.imageView4);
-        players = new Player[]{new Player((ImageView) findViewById(R.id.imageView5)),new Player((ImageView) findViewById(R.id.imageView6)),new Player((ImageView) findViewById(R.id.imageView7)),new Player((ImageView) findViewById(R.id.imageView8))};
+        players = new Player[]{new Player((ImageView) findViewById(R.id.imageView5)), new Player((ImageView) findViewById(R.id.imageView6)), new Player((ImageView) findViewById(R.id.imageView7)), new Player((ImageView) findViewById(R.id.imageView8))};
 
 
         rollDices.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +61,7 @@ public class GameActivity extends AppCompatActivity {
                             round = 0;
                             players[currentRound].move(score2);
                             currentRound++;
-                            if(currentRound == 4)
+                            if (currentRound == 4)
                                 currentRound = 0;
                             score2 = 0;
                         }
@@ -76,7 +76,6 @@ public class GameActivity extends AppCompatActivity {
                 anim2.setAnimationListener(animationListener);
                 imageView3.startAnimation(anim1);
                 imageView4.startAnimation(anim2);
-
             }
 
         });
