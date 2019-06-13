@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <SeekBar
+        android:id="@+id/soundLevel"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/effectsLevel"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/soundLevel"
+        app:layout_constraintStart_toStartOf="@+id/soundLevel"
+        app:layout_constraintTop_toBottomOf="@+id/soundLevel" />
+
+    <CheckBox
+        android:id="@+id/vibration"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/effectsLevel"
+        app:layout_constraintTop_toBottomOf="@+id/effectsLevel" />
+
+    <Spinner
+        android:id="@+id/language"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/vibration"
+        app:layout_constraintTop_toBottomOf="@+id/vibration"
+        android:entries="@array/languages"/>
+
+    <Spinner
+        android:id="@+id/AI_level"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/language"
+        app:layout_constraintStart_toStartOf="@+id/language"
+        app:layout_constraintTop_toBottomOf="@+id/language"
+        android:entries="@array/AI_levels"/>
+
+    <Spinner
+        android:id="@+id/color_theme"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/AI_level"
+        app:layout_constraintStart_toStartOf="@+id/AI_level"
+        app:layout_constraintTop_toBottomOf="@+id/AI_level"
+        android:entries="@array/theme_colors"/>
+
+    <TextView
+        android:id="@+id/sound_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sound"
+        app:layout_constraintBottom_toBottomOf="@+id/soundLevel"
+        app:layout_constraintEnd_toStartOf="@+id/soundLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/soundLevel" />
+
+    <TextView
+        android:id="@+id/effects_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/effects"
+        app:layout_constraintBottom_toBottomOf="@+id/effectsLevel"
+        app:layout_constraintEnd_toEndOf="@+id/sound_label"
+        app:layout_constraintStart_toStartOf="@+id/sound_label"
+        app:layout_constraintTop_toTopOf="@+id/effectsLevel" />
+
+    <TextView
+        android:id="@+id/vibration_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/vibration"
+        app:layout_constraintBottom_toBottomOf="@+id/vibration"
+        app:layout_constraintEnd_toStartOf="@+id/vibration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vibration" />
+
+    <TextView
+        android:id="@+id/language_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/language"
+        app:layout_constraintBottom_toBottomOf="@+id/language"
+        app:layout_constraintEnd_toStartOf="@+id/language"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/language" />
+
+    <TextView
+        android:id="@+id/AI_level_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/AI_level"
+        app:layout_constraintBottom_toBottomOf="@+id/AI_level"
+        app:layout_constraintEnd_toStartOf="@+id/AI_level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AI_level" />
+
+    <TextView
+        android:id="@+id/color_theme_label"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/color_theme"
+        app:layout_constraintBottom_toBottomOf="@+id/color_theme"
+        app:layout_constraintEnd_toStartOf="@+id/color_theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/color_theme" />
+
+    <Button
+        android:id="@+id/apply"
+        android:onClick="apply"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:onClick="back"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

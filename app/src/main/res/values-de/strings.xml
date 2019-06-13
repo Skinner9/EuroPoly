@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Europoly</string>
+    <string name="new_game">Nowa gra</string>
+    <string name="resume_game">Kontynnuj</string>
+    <string name="settings">Ustawienia</string>
+    <string name="exit">Wyjście</string>
+    <string name="choose_mode">Wybierz tryb</string>
+    <string name="hot_seat">Gorące krzesło</string>
+    <string name="multi_player">Multiplayer</string>
+    <string name="back">Wstecz</string>
+    <string name="sound">Dźwięk</string>
+    <string name="effects">Efekty</string>
+    <string name="vibration">Wibracja</string>
+    <string name="color_theme">Kolor tła</string>
+    <string name="AI_level">Poziom SI</string>
+    <string name="language">Język</string>
+    <string name="apply">Dalej</string>
+    <string name="player_name">Nazwa gracza</string>
+    <string name="AI">SI</string>
+    <string name="color">Kolor</string>
+    <string-array name="player_colors">
+        <item>Niebieski</item>
+        <item>Czerwony</item>
+        <item>Zielony</item>
+        <item>Żółty</item>
+        <item>Różowy</item>
+        <item>Fioletowy</item>
+        <item>Czarny</item>
+    </string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Polski</item>
+    </string-array>
+    <string-array name="theme_colors">
+        <item>Niebieski</item>
+        <item>Czerwony</item>
+        <item>Zielony</item>
+    </string-array>
+    <string-array name="AI_levels">
+        <item>Łatwy</item>
+        <item>Średni</item>
+        <item>Trudny</item>
+    </string-array>
+</resources>
